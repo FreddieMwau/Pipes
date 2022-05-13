@@ -1,0 +1,26 @@
+<!-- Transformations -->
+<!-- <p>{{me.name | uppercase}}</p>
+<p>{{me.networth | currency:'EUR':true}}</p>
+<p>{{me.dob |date:"fullDate" | uppercase}}</p>
+decimal is rounded 
+<p>{{me.rating | number:'1.1-1'}}</p> 
+<p>{{me.covered | percent}}</p> -->
+
+<!-- converts the data to json -->
+<!-- <pre>
+    {{me | json}}
+</pre> -->
+
+<!-- <p>Angular declares {{prom | async}}</p> -->
+<button (click)="addTrainee()">Add Trainee</button>
+<input type="text" class="search" placeholder="Search ..." [(ngModel)]="searchstring">
+<div class="header">
+    <p>Trainee Name</p>
+    <p>Trainee Age</p>
+</div>
+<div class="content" *ngFor="let trainee of trainees | search:searchstring | sort">
+    <p>{{trainee.name }}</p>
+    <p>{{trainee.age}}</p>
+</div>
+
+<!-- reverse -->
