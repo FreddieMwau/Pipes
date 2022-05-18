@@ -19,7 +19,7 @@ decimal is rounded
     <p>Trainee Age</p>
 </div>
 <div class="content" *ngFor="let trainee of trainees | search:searchstring | sort">
-    <p>{{trainee.name }}</p>
+    <p>{{trainee.name | reverse }}</p>
     <p>{{trainee.age}}</p>
 </div>
 
