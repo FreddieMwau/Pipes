@@ -8,6 +8,7 @@ import { PipeComponent } from './pipe/pipe.component';
 import { SearchPipe } from './search.pipe';
 import { SortPipe } from './sort.pipe';
 import { ReversePipe } from './reverse.pipe';
+import { DirectivesComponent } from './directives/directives.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ReversePipe } from './reverse.pipe';
     SearchPipe,
     SortPipe,
     ReversePipe,
+    DirectivesComponent,
   ],
   imports: [
     BrowserModule,

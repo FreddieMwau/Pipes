@@ -1,0 +1,30 @@
+<input type="text" #names>
+<button (click)="addName(names.value)">Add Name</button>
+<p *ngIf="isAdded; else noUser">Added :: {{name}}</p>
+
+
+<!-- looping through any element -->
+<div *ngFor="let student of students">
+    <p>{{student.name}}</p>
+    <p>{{student.age}}</p>
+</div>
+<!-- we have to bind ngStyle, ngClass with [] and it takes is an object
+of key value pair of what you intend to change in CSS -->
+<p [ngStyle]="{backgroundColor:getColor()}"
+    [ngClass]="{legal:isLegal}">{{legal}}</p>
+<!-- ngswitch -->
+<div [ngSwitch]="gender">
+    <p *ngSwitchCase="'Male'">The gender is Male</p>
+    <p *ngSwitchCase="'Female'">The gender is Female</p>
+    <p *ngSwitchDefault="">Default</p>
+</div>
+<!-- ng template is what is displayed on dire -->
+
+<!-- changing div to dark mode -->
+<button (click)="changeTheme()">Dark Mode</button>
+<div class="body" [ngStyle]="{backgroundColor:theme?'dimgrey':'whitesmoke'}">
+
+</div>
+<ng-template #noUser>
+    <p>No user was added</p>
+</ng-template>
